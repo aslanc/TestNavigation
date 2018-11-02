@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestNavigation"
+             xmlns:TabCtrls="clr-namespace:CustomTabTestNavigation;assembly=CustomTabTestNavigation"
+             x:Class="TestNavigation.MainPage"
+             Title="Tu medico">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="{StaticResource Prymary}">
+            
+            <Image Source="efault.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <TabCtrls:CustomTabs x:Name="ProjectsDaysTabs"
+
+                 Orientation="Vertical"
+
+              SelectedTabIndex="1"
+
+             SelectedColor="Lime" UnselectedColor="Green"
+
+              VerticalOptions="FillAndExpand"
+
+              HorizontalOptions="FillAndExpand">
+                </TabCtrls:CustomTabs>
+            </StackLayout>
+        </StackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
