@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TestNavigation"
-             xmlns:TabCtrls="clr-namespace:CustomTabTestNavigation;assembly=CustomTabTestNavigation"
+             xmlns:TabCtrls="clr-namespace:CustomTabTestNavigation"
              x:Class="TestNavigation.MainPage"
              Title="Tu medico">
 
@@ -13,7 +13,8 @@
             <Image Source="efault.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <TabCtrls:CustomTabs x:Name="ProjectsDaysTabs"
+
+                <local:CustomTabs x:Name="ProjectsDaysTabs"
 
                  Orientation="Vertical"
 
@@ -24,7 +25,75 @@
               VerticalOptions="FillAndExpand"
 
               HorizontalOptions="FillAndExpand">
-                </TabCtrls:CustomTabs>
+
+                    <local:CustomTabButtons Orientation="Horizontal">
+
+                        <local:CustomTabButton x:Name="ProjectsTabButton"
+
+                 Text="Projects"
+
+                 BorderRadius = "1" BorderWidth = "2" HeightRequest="35"
+
+                 WidthRequest = "75" FontSize="13" TextColor="Black"/>
+
+                        <local:CustomTabButton x:Name="WeeksTabButton" Text="Weeks"
+
+                 BorderRadius = "1" BorderWidth = "2" HeightRequest="35"
+
+                 WidthRequest = "75" FontSize="13" TextColor="Black"/>
+
+                        <local:CustomTabButton x:Name="DaysTabButton" Text="Days"
+
+                 BorderRadius = "1" BorderWidth = "2" HeightRequest="35"
+
+                 WidthRequest = "75" FontSize="13" TextColor="Black"/>
+
+                    </local:CustomTabButtons>
+
+                    <local:CustomTab x:Name="ProjectsTab" IsVisible="True"
+
+                 VerticalOptions="FillAndExpand"
+
+                 HorizontalOptions="FillAndExpand"
+
+                 BackgroundColor="Pink">
+
+                        <Label Text="Projects Tab" HorizontalOptions="Center"
+
+                    TextColor="Black" />
+
+                    </local:CustomTab>
+
+                    <local:CustomTab x:Name="WeeksTab" IsVisible="False"
+
+                 VerticalOptions="FillAndExpand"
+
+                 HorizontalOptions="FillAndExpand"
+
+                 BackgroundColor="Yellow">
+
+                        <Label Text="Weeks Tab" HorizontalOptions="Center"
+
+                    TextColor="Black"/>
+
+                    </local:CustomTab>
+
+                    <local:CustomTab x:Name="DaysTab" IsVisible="False"
+
+                VerticalOptions="FillAndExpand"
+
+                 HorizontalOptions="FillAndExpand"
+
+                BackgroundColor="Aqua">
+
+                        <Label Text="Days Tab" HorizontalOptions="Center"
+
+                    TextColor="Black"/>
+
+                        </local:CustomTab>
+
+                        </local:CustomTabs>
+
             </StackLayout>
         </StackLayout>
         
